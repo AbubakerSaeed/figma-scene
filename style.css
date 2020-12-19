@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+/* DEFAULT */
+/* ----------------------------------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 1000px;
+  min-height: 100vh;
+  color: #fff;
+  background-image: url("./assets/bg.jpg");
+  background-size: cover;
+  font-family: 'Noto Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  padding: 2vw 10vw;
+  display: flex;
+}
+
+a {
+  color: hsl(140, 70%, 70%);
+}
+
+button {
+  border: 0;
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  transition-property: opacity, background;
+  transition-duration: .06s;
+  transition-timing-function: linear;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* COL-$ */
+/* ----------------------------------------------- */
+.col-1 {
+  flex: 1 0;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.col-2 {
+  flex: 1 0;
+  padding-left: 40px;
+  box-sizing: border-box;
+}
+
+/* HEADING */
+/* ----------------------------------------------- */
+.heading__h1 {
+  margin: 0;
+  font-size: 2.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.heading__h1>svg {
+  margin-right: 16px;
+}
+
+.heading__desc {
+  margin-top: 8px;
+}
+
+/* INFO */
+/* ----------------------------------------------- */
+.info {
+  padding-top: 20px;
+}
+
+.info__item:not(:last-child) {
+  margin-bottom: .8em;
+}
+
+/* SCENE-LINK */
+/* ----------------------------------------------- */
+.scene-link:link,
+.scene-link:visited {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 40px;
+  color: #fff;
+  background: hsla(240, 50%, 80%, .8);
+  padding: 14px 18px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+}
+
+.scene-link svg {
+  margin-right: 8px;
+}
+
+.scene-link:hover,
+.scene-link:focus {
+  background: hsla(240, 50%, 80%, .9);
+}
+
+.scene-link--gh:link,
+.scene-link--gh:visited {
+  background: #000;
+  margin-left: 4px;
+}
+
+.scene-link--gh:hover,
+.scene-link--gh:focus {
+  background: hsl(0, 0%, 12%);
+}
+
+/* PREVIEW */
+/* ----------------------------------------------- */
+.preview {
+  position: relative;
+}
+
+.preview__box {
+  width: 100%;
+  border: 2px solid;
+  border-top-width: 40px;
+  border-radius: 10px;
+}
+
+.preview__image {
+  border-color: hsl(220, 50%, 50%);
+}
+
+.preview__video {
+  border-color: hsl(160, 60%, 40%);
+  position: absolute;
+  bottom: -100px;
+  left: -80px;
+}
+
+/* TWITTER */
+/* ----------------------------------------------- */
+.twitter-follow-button {
+  position: fixed !important;
+  top: 20px !important;
+  left: 20px !important;
+  z-index: 10;
+}
+
+/* FORM */
+/* ----------------------------------------------- */
+.form-link:link,
+.form-link:visited {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  opacity: .6;
+  text-decoration: none;
+}
+
+.form-link:hover,
+.form-link:focus {
+  opacity: 1;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 20px;
+  margin-top: 40px;
+}
+
+.form__label {
+  margin-bottom: 2rem;
+}
+
+.form__text {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: .4em;
+  opacity: .8;
+}
+
+.form__input {
+  font-size: 1rem;
+  font-family: inherit;
+  padding: 14px;
+  box-sizing: border-box;
+  background: hsla(248, 92%, 95%, .5);
+  border: 0;
+  color: hsl(0, 0%, 20%);
+  width: 19rem;
+}
+
+.form__input:focus {
+  color: #000;
+  background: hsl(248, 92%, 95%);
+  outline: none;
+}
+
+.form__btn {
+  padding: 14px 10px;
+  background: hsla(240, 50%, 80%, .8);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1.2rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form__btn>svg {
+  margin-right: 6px;
+}
+
+.form__btn:hover,
+.form__btn:focus {
+  background: hsla(240, 50%, 80%, .9);
+}
+
+/* SPINNER */
+/* ----------------------------------------------- */
+.spinner {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  color: hsl(250, 70%, 70%);
+  display: none;
+  align-items: center;
+}
+
+.spinner[data-animation="on"] {
+  display: flex;
+}
+
+.spinner__circle {
+  width: 50px;
+  height: 50px;
+  border: 4px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50px;
+}
+
+.spinner[data-animation="on"] .spinner__circle {
+  animation: spin .5s infinite linear;
+}
+
+.spinner__text {
+  margin-left: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* SCENE */
+/* ----------------------------------------------- */
+.scene {
+  display: none;
+  min-width: 1920px;
+  min-height: 1080px;
+  width: 1920px;
+  height: 1080px;
+  position: relative;
+  box-shadow: 0 25px 120px hsla(0, 0%, 16%, 0.5);
+}
+
+.scene>div {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+}
+
+.scene svg {
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+}
+
+/* SCENE-ACTIONS */
+/* ----------------------------------------------- */
+.scene-actions {
+  box-sizing: border-box;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  display: none;
+}
+
+.scene-actions__btn {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid hsla(0, 0%, 100%, .4);
+  border-radius: 3rem;
+  background: hsla(0, 0%, 80%, .2);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: .6;
+}
+
+.scene-actions__btn:hover,
+.scene-actions__btn:focus {
+  opacity: 1;
+}
+
+.scene-actions__btn svg {
+  height: 1.5rem;
+}
+
+/* SCENE-SCALE */
+/* ----------------------------------------------- */
+.scene-scale {
+  border: 1px solid hsla(0, 0%, 100%, .2);
+  background: hsla(0, 0%, 80%, .2);
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10;
+  display: none;
+  border-radius: 100rem;
+  box-sizing: border-box;
+  padding: .2rem .8rem;
+}
+
+.scene-scale__btn {
+  background: transparent;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  color: #fff;
+  font-size: .9rem;
+  opacity: .6;
+}
+
+.scene-scale__btn:hover,
+.scene-scale__btn:focus {
+  opacity: 1;
+}
+
+/* SCENE-MODE */
+/* ----------------------------------------------- */
+.scene-mode {
+  display: block;
+  background: #f4f0ff;
+}
+
+.scene-mode .form-container {
+  display: none;
+}
+
+.scene-mode .scene {
+  display: block;
+}
+
+.scene-mode .scene-actions {
+  display: flex;
+}
+
+.scene-mode .scene-scale {
+  display: flex;
+}

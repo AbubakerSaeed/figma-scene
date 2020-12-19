@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scene – Figma Scene</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./../assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./../assets/favicon-16x16.png">
+    <link rel="stylesheet" href="./../style.css">
+  </head>
+
+  <body>
+
+    <!-- TWITTER -->
+    <a href="https://twitter.com/AbubakerSaeed96?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="true">Follow @AbubakerSaeed96</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    <!-- FORM -->
+    <div class="form-container">
+
+      <a href="./../" class="form-link">&lArr; Return to Home Page</a>
+
+      <form class="form">
+        <label class="form__label">
+          <span class="form__text">Personal Access Token 🔐</span>
+          <input class="form__input" type="password" id="token" required>
+        </label>
+
+        <label class="form__label">
+          <span class="form__text">File Key 🔑</span>
+          <input class="form__input" type="text" id="key" spellcheck="false" required>
+        </label>
+
+        <button type="submit" class="form__btn">
+          <svg height="1.2em" viewBox="0 0 25 25" fill="none">
+            <g clip-path="url(#clip0)">
+              <path d="M12.5217 17.8794C15.2831 17.8794 17.5217 15.6408 17.5217 12.8794C17.5217 10.118 15.2831 7.87939 12.5217 7.87939C9.76024 7.87939 7.52167 10.118 7.52167 12.8794C7.52167 15.6408 9.76024 17.8794 12.5217 17.8794Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M12.5217 1.87939V3.87939" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M12.5217 21.8794V23.8794" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M4.74164 5.09937L6.16164 6.51937" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M18.8817 19.2394L20.3017 20.6594" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M1.52167 12.8794H3.52167" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M21.5217 12.8794H23.5217" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M4.74164 20.6594L6.16164 19.2394" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M18.8817 6.51937L20.3017 5.09937" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+            <defs>
+              <clipPath id="clip0">
+                <rect width="24" height="24" fill="white" transform="translate(0.521667 0.879395)" />
+              </clipPath>
+            </defs>
+          </svg>
+          <span>Create Scene</span>
+        </button>
+      </form>
+
+    </div>
+
+    <!-- SPINNER -->
+    <div class="spinner" data-animation="off">
+      <div class="spinner__circle"></div>
+      <p class="spinner__text">Generating</p>
+    </div>
+
+    <!-- SCENE -->
+    <div class="scene"></div>
+
+    <!-- SCENE-ACTIONS -->
+    <div class="scene-actions">
+      <button id="full-screen" style="margin-right: 8px" class="scene-actions__btn">
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.32373 16.9221V19.9221C3.32373 20.4526 3.53444 20.9613 3.90952 21.3363C4.28459 21.7114 4.7933 21.9221 5.32373 21.9221H8.32373M8.32373 3.92212H5.32373C4.7933 3.92212 4.28459 4.13283 3.90952 4.50791C3.53444 4.88298 3.32373 5.39169 3.32373 5.92212V8.92212L8.32373 3.92212ZM21.3237 8.92212V5.92212C21.3237 5.39169 21.113 4.88298 20.7379 4.50791C20.3629 4.13283 19.8542 3.92212 19.3237 3.92212H16.3237L21.3237 8.92212ZM16.3237 21.9221H19.3237C19.8542 21.9221 20.3629 21.7114 20.7379 21.3363C21.113 20.9613 21.3237 20.4526 21.3237 19.9221V16.9221L16.3237 21.9221Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <button id="close" class="scene-actions__btn">
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.0946 6.276L6.0946 18.276" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M6.0946 6.276L18.0946 18.276" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- SCENE-SCALE -->
+    <div class="scene-scale">
+      <button class="scene-scale__btn" id="small">.25</button>
+      <button class="scene-scale__btn" id="half">.5</button>
+      <button class="scene-scale__btn" id="original">1</button>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <script src="./../script.js"></script>
+
+  </body>
+
+</html>
