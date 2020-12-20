@@ -17,7 +17,7 @@ _(The ship comes back in the animation, due to the large file size I had to shor
 
 ## Tech (development side)
 
-I'm using [GreenSock](https://greensock.com/) to animate the scene. I've shared the animation as separate on [CodePen](https://codepen.io/AbubakerSaeed/pens/public) in case if you just want to explore the animation code 🙂
+I'm using [GreenSock](https://greensock.com/) to animate the scene. I've shared the _animated night scene_ as separate on [CodePen](https://codepen.io/AbubakerSaeed/full/JjRJBZO) in case if you just want to explore the animation code 🙂
 
 ## License
 
